@@ -1,0 +1,14 @@
+@import '~semantic-ui-css/semantic.css';
+
+
+#root {
+    height: 100%;
+}
+
+.auth-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}

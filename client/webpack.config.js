@@ -31,16 +31,15 @@ module.exports = {
                 }
             },
             {
-                test: /\.woff2?(\?[a-z0-9#]+)?$/,
-                // Inline small woff files and output them below font/.
-                // Set mimetype just in case.
-                loader: 'url-loader',
-                options: {
-                    name: 'fonts/[name].[hash].[ext]',
-                    limit: 50000,
-                    mimetype: 'application/font-woff',
-                    outputPath: 'css/'
-                }
+                test: /\.(jpe?g|png|gif|svg|ttf|woff2?|eot)(\?.+)?$/i,
+                use: [
+                    {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]'
+                    }
+                    }
+                ]
             },
             {
                 test: /\.(ttf|svg|eot)(\?[a-z0-9#]+)?$/,
@@ -51,7 +50,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.s[c|a]ss$/,
+                test: /\.(s[c|a]ss|css)$/,
                 use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             },
         ]
