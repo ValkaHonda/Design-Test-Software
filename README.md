@@ -10,3 +10,8 @@ Designing and Testing software
 2) Open /server/src/main/java/project/Application.java
 3) Right-click on main method and run
 4) To check server -> type localhost:8080/Home in the URL bar on your favorite browser.
+
+# To start client
+```bash
+client$ npm start
+```
