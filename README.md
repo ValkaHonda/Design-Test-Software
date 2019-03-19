@@ -1,6 +1,10 @@
 # Design-Test-Software
 Designing and Testing software
 
+# Requirements
+- Nodejs 
+- Java v8
+
 # To start server
 1) IntelliJ -> import -> ~/server/pom.xml
 2) Open /server/src/main/java/project/Application.java
