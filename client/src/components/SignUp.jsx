@@ -6,6 +6,11 @@ import {
     Form,
     Header
 } from 'semantic-ui-react';
+import axios from 'axios';
+
+const instance = axios.create({
+    baseURL: 'http://localhost:8080'
+  });
 
 export default class SignUp extends React.Component {
     state = {
@@ -22,7 +27,16 @@ export default class SignUp extends React.Component {
     };
 
     sendRequest = () => {
-        console.log(this.state);
+        instance.post(`/users/sign-up`, {
+            email: this.state.email,
+            pass: this.state.pass
+        })
+        .then((response) => {
+            console.log(response);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
     };
 
     render () {
