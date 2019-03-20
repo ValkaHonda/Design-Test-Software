@@ -13,5 +13,6 @@ Designing and Testing software
 
 # To start client
 ```bash
+client$ npm install
 client$ npm start
 ```
