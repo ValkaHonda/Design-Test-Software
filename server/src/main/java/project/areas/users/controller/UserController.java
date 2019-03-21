@@ -27,8 +27,6 @@ public class UserController {
     }
     @PostMapping("/sign-up")
     public ResponseEntity registerUser(@RequestBody final UserRegisterForm registerForm){
-        System.out.println(registerForm.getEmail());
-        System.out.println(registerForm.getPass());
         Role role = this.roleService.getRoleByName("ROLE_NORMAL");
         this.userService.registerUser(registerForm,role);
         return ResponseEntity.ok("Successful sign-up");
