@@ -1,6 +1,10 @@
 package project.areas.users.entities;
 
+import org.springframework.security.core.GrantedAuthority;
+
 import javax.persistence.*;
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -20,6 +24,9 @@ public class User {
         this.password = password;
     }
 
+    public User(String subject, String s, Collection<? extends GrantedAuthority> authorities) {
+        this.setRoles(new HashSet<>());
+    }
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getId() {

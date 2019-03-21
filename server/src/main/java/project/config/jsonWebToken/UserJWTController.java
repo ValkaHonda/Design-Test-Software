@@ -11,6 +11,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import project.areas.users.models.bidingModels.UserLoginBindingModel;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
