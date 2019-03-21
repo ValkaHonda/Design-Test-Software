@@ -1,7 +1,7 @@
 package project.areas.users.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -9,6 +9,7 @@ public class User {
     private Integer id;
     private String email;
     private String password;
+    private Set<Role> roles;
 
     public User(){
 
@@ -41,5 +42,16 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "user_role")
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 }
