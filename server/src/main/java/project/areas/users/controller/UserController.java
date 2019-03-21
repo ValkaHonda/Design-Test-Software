@@ -12,6 +12,6 @@ public class UserController {
     }
     @PostMapping("/sign-up")
     public String registerUser(){
-        
+
     }
 }
