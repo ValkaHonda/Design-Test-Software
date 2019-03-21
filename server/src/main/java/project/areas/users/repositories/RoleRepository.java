@@ -6,5 +6,5 @@ import project.areas.users.entities.Role;
 import java.util.Set;
 
 public interface RoleRepository  extends JpaRepository<Role,Integer>{
-    Set<Role> getRoleByName(String roleName);
+    Role getRoleByName(String roleName);
 }
