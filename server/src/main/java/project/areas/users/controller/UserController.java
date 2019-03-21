@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 import project.areas.users.models.bidingModels.UserRegisterForm;
 
 @RestController
-@CrossOrigin(origins = "")
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/users")
 public class UserController {
     @GetMapping("/test")
