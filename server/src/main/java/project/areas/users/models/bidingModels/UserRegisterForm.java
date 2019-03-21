@@ -2,8 +2,15 @@ package project.areas.users.models.bidingModels;
 
 public class UserRegisterForm {
     private String email;
-    private String password;
+    private String pass;
 
+    public String getPass() {
+        return pass;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
     public String getEmail() {
         return email;
     }
@@ -12,11 +19,4 @@ public class UserRegisterForm {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 }
