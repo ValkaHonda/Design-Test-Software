@@ -1,6 +1,5 @@
 package project.config.jsonWebToken;
 
-import com.sun.org.apache.xml.internal.security.algorithms.SignatureAlgorithm;
 import io.jsonwebtoken.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,7 +9,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import project.areas.users.entities.User;
 
-import java.security.SignatureException;
+
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Date;
