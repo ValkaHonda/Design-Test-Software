@@ -1,5 +1,6 @@
 package project.areas.users.controller;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import project.areas.users.models.bidingModels.UserRegisterForm;
 
@@ -12,15 +13,10 @@ public class UserController {
         return "<h1>Hello from UserController.<h1>";
     }
     @PostMapping("/sign-up")
-    public String registerUser(@RequestBody final UserRegisterForm registerForm){
+    public ResponseEntity registerUser(@RequestBody final UserRegisterForm registerForm){
         System.out.println(registerForm.getEmail());
-        System.out.println(registerForm.getEmail());
-        System.out.println(registerForm.getEmail());
-        System.out.println(registerForm.getEmail());
-        System.out.println(registerForm.getEmail());
-        System.out.println(registerForm.getEmail());
+        System.out.println(registerForm.getPass());
 
-        return "<h1>Sucessful register<h1>";
-    };
+        return ResponseEntity.ok("Successful sign-up");
     }
 }
