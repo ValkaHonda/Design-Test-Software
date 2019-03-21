@@ -20,6 +20,8 @@ public class User {
         this.password = password;
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getId() {
         return id;
     }
@@ -28,6 +30,7 @@ public class User {
         this.id = id;
     }
 
+    @Column(name = "email", unique = true)
     public String getEmail() {
         return email;
     }
@@ -36,6 +39,7 @@ public class User {
         this.email = email;
     }
 
+    @Column(name = "password")
     public String getPassword() {
         return password;
     }
