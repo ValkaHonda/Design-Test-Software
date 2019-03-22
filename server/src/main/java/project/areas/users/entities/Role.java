@@ -1,11 +1,13 @@
 package project.areas.users.entities;
 
+import org.springframework.security.core.GrantedAuthority;
+
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
 @Table(name = "roles")
-public class Role {
+public class Role implements GrantedAuthority {
     private Integer id;
     private String name;
     private Set<User> users;
@@ -39,5 +41,11 @@ public class Role {
 
     public void setUsers(Set<User> users) {
         this.users = users;
+    }
+
+    @Transient
+    @Override
+    public String getAuthority() {
+        return this.name;
     }
 }
