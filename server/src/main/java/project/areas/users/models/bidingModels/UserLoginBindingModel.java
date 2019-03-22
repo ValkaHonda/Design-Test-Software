@@ -3,7 +3,7 @@ package project.areas.users.models.bidingModels;
 public class UserLoginBindingModel {
     private String email;
     private String pass;
-    private Boolean isRememberMe;
+    private Boolean rememberMe;
 
 
     public String getEmail() {
@@ -23,10 +23,10 @@ public class UserLoginBindingModel {
     }
 
     public Boolean getRememberMe() {
-        return isRememberMe;
+        return rememberMe;
     }
 
     public void setRememberMe(Boolean rememberMe) {
-        isRememberMe = rememberMe;
+        this.rememberMe = rememberMe;
     }
 }
