@@ -34,7 +34,7 @@ public class UserJWTController {
     @PostMapping("/authenticate")
     public ResponseEntity authorize(@Valid @RequestBody UserLoginBindingModel userLoginBindingModel, HttpServletResponse response) {
         UsernamePasswordAuthenticationToken authenticationToken =
-                new UsernamePasswordAuthenticationToken(userLoginBindingModel.getUsername(), userLoginBindingModel.getPassword());
+                new UsernamePasswordAuthenticationToken(userLoginBindingModel.getEmail(), userLoginBindingModel.getPass());
 
         try {
             Authentication authentication = this.authenticationManager.authenticate(authenticationToken);

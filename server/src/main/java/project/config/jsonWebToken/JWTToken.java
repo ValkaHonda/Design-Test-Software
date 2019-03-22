@@ -2,9 +2,6 @@ package project.config.jsonWebToken;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * Created by Lenny on 3/21/2019.
- */
 public class JWTToken {
     private String idToken;
 
