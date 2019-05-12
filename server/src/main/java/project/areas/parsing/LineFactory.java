@@ -24,7 +24,7 @@ public class LineFactory {
         supportedFormats = new HashMap<>();
         Class[] classes;
         try{
-            classes = Utilities.getClasses("model");
+            classes = Utilities.getClasses("parsing");
             for(Class clazz : classes){
                 if(Objects.equals(clazz.getGenericSuperclass(), Line.class) && !Modifier.isAbstract(clazz.getModifiers())){
                     Constructor[] constructors = clazz.getConstructors();
